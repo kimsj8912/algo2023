@@ -15,7 +15,7 @@ int main() {
         cin >> n;
         result = factorial(n);
         while (result % 10 == 0) {
-                result = result * 0.1;
+                result /= 10;
         }
         cout << result % 1000 << endl;
     }
@@ -28,6 +28,6 @@ int factorial(int n) {
         return 1;
     }
     answer = n * factorial(n-1);
-    answer %= 100000;
+    answer %= 10000000;
     return answer;
 }
